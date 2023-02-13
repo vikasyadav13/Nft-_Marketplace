@@ -25,6 +25,7 @@
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
+  "postinstall": "npx patch-package",
   "eslintConfig": {
     "extends": [
       "react-app",

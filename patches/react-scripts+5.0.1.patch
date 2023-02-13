@@ -1,0 +1,17 @@
+diff --git a/node_modules/react-scripts/config/webpack.config.js b/node_modules/react-scripts/config/webpack.config.js
+index e465d8e..8750520 100644
+--- a/node_modules/react-scripts/config/webpack.config.js
++++ b/node_modules/react-scripts/config/webpack.config.js
+@@ -330,6 +330,12 @@ module.exports = function (webpackEnv) {
+         }),
+         ...(modules.webpackAliases || {}),
+       },
++      fallback: {
++          // 👇️👇️👇️ add this 👇️👇️👇️
++          "fs": false,
++          "os": false,
++          "path": false,
++      },
+       plugins: [
+         // Prevents users from importing files from outside of src/ (or node_modules/).
+         // This often causes confusion because we only process files within src/ with babel.
